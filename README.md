@@ -1,9 +1,5 @@
 ## aluraBooks - projeto desenvolvido durante o curso de responsividade com mobile-fist
 
-![image](https://raw.githubusercontent.com/AnastasiiadeO/img_load/main/prADOres.png?token=GHSAT0AAAAAACMVIG4ALVUZIOYDOKF2QLSSZNWLWYA)
-
-
-
 O projeto responsivel com **MOBILE-FIST** , desenvolvido durante o curso da Alura.
 
 Ferramentas utilizadas:
