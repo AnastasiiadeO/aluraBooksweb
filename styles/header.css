@@ -18,7 +18,7 @@
 
 /*menu troca cor quando clica*/
 .conteiner__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburguer {
-    background-image: url(../assets/MenuAberto.svg) ;
+    background-image: url("../assets/MenuAberto.svg") ;
     
 }
 .conteiner__botao:checked ~ .container__rotulo {
