@@ -1,0 +1,176 @@
+.cabecalho {
+    background-color: var(--branco-primario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* libera posibilidade de colocar outris elementos em cima e etc
+    necessario para lista aparecer em cima */
+}
+
+.cabecalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block; /*para permetir ajustes de width e height*/
+}
+
+/*menu troca cor quando clica*/
+.conteiner__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburguer {
+    background-image: url(../assets/MenuAberto.svg) ;
+    
+}
+.conteiner__botao:checked ~ .container__rotulo {
+    background: var(--azul-gradient);
+
+}
+
+
+.conteiner {
+    display: flex;
+    align-items: center;
+}
+
+.conteiner__img {
+    padding: 1rem;
+}
+
+/*paraesconder a lista se menu nao foi clicado*/
+.lista-menu {
+    display: none;
+    position: absolute; /*para lista aparecer em cima de menu*/
+    top: 100%; /*100% pra baixo de cabecalho*/
+    width: 60vw;
+}
+
+/*para lista aparecer quando clicar(quando checked) no menu*/
+.conteiner__botao:checked ~ .lista-menu{
+    display: block;
+}
+
+/*para checkbox nao aparecer*/
+.conteiner__botao {
+    display: none;
+}
+
+.lista-menu__titulo, 
+.lista-menu__item {
+    padding: 1rem;
+    background-color: var(--branco-primario);
+}
+
+.lista-menu__titulo {
+    color: var(--amarelo-destaque);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    /* !!! */
+    background: var(--azul-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*nao aplica gradient cimi color no texto, por isso usamos todo este codigo e aplicamos backgraund*/
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase; /* para tudo ficar GRANGE se for alguma coisa escrita em letras minusculos*/
+}
+
+.conteiner__titulo, .opcoes, .container__texto {
+    display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .conteiner__titulo{
+        font-family: 'Josefin Sans', sans-serif;
+        color: var(--preto-texto);
+        font-size: 30px;
+        font-weight: 400;
+        display: block;
+    }
+    .conteiner__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+    }
+
+    .opcoes__item {
+        color: var(--preto-texto);
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 0 1rem;
+        text-transform: uppercase;
+    }
+
+    .opcoes__link {
+        color: var(--preto-texto);
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    .conteiner__img-transparente, .cabecalho__menu-hamburguer{
+        display: none;
+    }
+
+    .opcoes__botao:checked ~ .lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opcoes__botao {
+        display: none;
+    }
+
+    .opcoes__botao:checked ~ .opcoes__rotulo> .opcoes__item {
+        background: var(--azul-gradient);
+        color: var(--branco-primario);  
+    }
+
+    .opcoes__item {
+        padding: 2rem 1rem;
+    }
+
+
+    /*items do menu trocam cor quando passa mouse*/
+    .lista-menu__item:hover {
+        background: var(--azul-gradient);
+    }
+    .lista-menu__item:hover > .lista-menu__link {
+        -webkit-text-fill-color: var(--branco-primario);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width:1728px) {
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto-texto);
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+    }
+    .cabecalho {
+        padding: 0 2rem;
+    }
+
+    .opcoes {
+        margin-right: auto;
+    }
+
+    .container__texto {
+        display: block;
+    }
+}
+
