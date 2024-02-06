@@ -2,6 +2,8 @@
 
 O projeto responsivel com **MOBILE-FIST** , desenvolvido durante o curso da Alura.
 
+A [link para site do projeto](https://anastasiiadeo.github.io/aluraBooksweb/)
+
 Ferramentas utilizadas:
 * HTML
 * CSS
